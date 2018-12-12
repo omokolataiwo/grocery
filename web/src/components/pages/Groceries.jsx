@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import GroceryItems from '../container/GroceryItems';
 import AddGroceryItem from '../container/AddGroceryItem';
-import { getAllItems, addItem, updateItem } from '../../actions/grocery';
+import {
+  getAllItems, addItem, updateItem, resetGroceryState
+} from '../../actions/grocery';
+import { ADD_NEW_ITEM_FAILURE } from '../../const';
 
 class Shopping extends Component {
   // static propTypes = {
@@ -15,15 +18,27 @@ class Shopping extends Component {
 
   state = {
     grocery: {
-      title: '',
+      name: '',
       amount: 0
     },
-    errors: {}
+    errors: {
+      name: [],
+      amount: []
+    }
   };
 
   componentDidMount() {
     const { getAllItems } = this.props;
     getAllItems();
+  }
+
+  componentDidUpdate() {
+    const { type, error, resetGroceryState } = this.props;
+
+    if (type === ADD_NEW_ITEM_FAILURE) {
+      this.setState({ errors: error });
+      resetGroceryState();
+    }
   }
 
   onFormFieldChange = (event) => {
@@ -49,14 +64,21 @@ class Shopping extends Component {
       <div>
         <h1>Grocery Listify</h1>
         <GroceryItems groceries={items || []} />
-        <AddGroceryItem grocery={grocery} errors={errors} onChange={this.onFormFieldChange} />
+        <AddGroceryItem
+          grocery={grocery}
+          errors={errors}
+          onChange={this.onFormFieldChange}
+          addItem={this.onAddGrocery}
+        />
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ grocery: { items } }) => ({ items });
+const mapStateToProps = ({ grocery: { type, items, error } }) => ({ type, items, error });
 export default connect(
   mapStateToProps,
-  { getAllItems, addItem, updateItem }
+  {
+    getAllItems, addItem, updateItem, resetGroceryState
+  }
 )(Shopping);

@@ -21,7 +21,9 @@ var _default = function _default(req, res, next) {
   }, _validationConstraint.itemValidation);
 
   if (hasValidationError) {
-    return res.status(401).json(hasValidationError);
+    return res.status(401).json({
+      error: hasValidationError
+    });
   }
 
   return next();
