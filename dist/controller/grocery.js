@@ -39,7 +39,7 @@ function () {
           case 3:
             allGroceries = _context.sent;
             return _context.abrupt("return", res.status(200).json({
-              data: allGroceries
+              items: allGroceries
             }));
 
           case 7:
@@ -68,6 +68,7 @@ function () {
   var _ref2 = (0, _asyncToGenerator2.default)(
   /*#__PURE__*/
   _regenerator.default.mark(function _callee2(req, res) {
+    var item;
     return _regenerator.default.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
@@ -77,25 +78,27 @@ function () {
             return _grocery.default.add(req.body);
 
           case 3:
+            item = _context2.sent;
+            console.log('========================> ', item);
             return _context2.abrupt("return", res.status(201).json({
               data: {
-                message: 'Item Added'
+                item: item
               }
             }));
 
-          case 6:
-            _context2.prev = 6;
+          case 8:
+            _context2.prev = 8;
             _context2.t0 = _context2["catch"](0);
             return _context2.abrupt("return", res.state(500).json({
               data: 'Error!'
             }));
 
-          case 9:
+          case 11:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2, this, [[0, 6]]);
+    }, _callee2, this, [[0, 8]]);
   }));
 
   return function (_x3, _x4) {

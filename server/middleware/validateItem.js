@@ -7,7 +7,7 @@ export default (req, res, next) => {
 
 
   if (hasValidationError) {
-    return res.status(401).json(hasValidationError);
+    return res.status(401).json({ error: hasValidationError });
   }
   return next();
 };
