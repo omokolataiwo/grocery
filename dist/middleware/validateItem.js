@@ -14,10 +14,12 @@ var _validationConstraint = require("./validationConstraint");
 var _default = function _default(req, res, next) {
   var _req$body = req.body,
       name = _req$body.name,
-      amount = _req$body.amount;
+      amount = _req$body.amount,
+      purchased = _req$body.purchased;
   var hasValidationError = (0, _validate.default)({
     name: name,
-    amount: amount
+    amount: amount,
+    purchased: purchased
   }, _validationConstraint.itemValidation);
 
   if (hasValidationError) {
@@ -26,6 +28,11 @@ var _default = function _default(req, res, next) {
     });
   }
 
+  req.body = {
+    name: name,
+    amount: amount,
+    purchased: !!purchased
+  };
   return next();
 };
 

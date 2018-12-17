@@ -3,8 +3,15 @@ import { connect } from 'react-redux';
 import {
   Switch, Route, Redirect, Link
 } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faTrash, faEdit, faCartPlus, faShoppingCart
+} from '@fortawesome/free-solid-svg-icons';
 import Groceries from './components/pages/Groceries';
 import Signin from './components/pages/Signin';
+
+library.add(faTrash, faEdit, faCartPlus, faShoppingCart);
+
 
 class App extends Component {
   state = {};

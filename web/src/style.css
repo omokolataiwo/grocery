@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+.container.main {
+  border: 1px solid #cccccc;
+}
+
+.container.main > h1 {
+  margin: 34px auto 40px auto;
+  font-family: 'Pacifico', cursive;
+}
+
+.grocery-item {
+  border-top: 1px solid;
+  padding: 10px 20px;
+}
+
+.grocery-item .title {
+  font-size: 1.5em;
+  font-family: 'Josefin Sans', cursive;
+  text-transform: capitalize;
+  color: #222;
+}
+
+.grocery-item .amount {
+  font-size: 1.2em;
+}
+
+.control {
+  float: right;
+}
+
+.control svg {
+  margin: -3px 9px;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.control span {
+  margin: 1px 9px;
+}
+
+.btn-buy {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.form-title {
+  font-family: 'Josefin Sans', cursive;
+  word-spacing: -0.2em;
+}
+.back-btn {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid;
+  padding: 0 8px;
+  border-radius: 100px;
+}
+
+.form-title .label {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: bottom;
+} 
