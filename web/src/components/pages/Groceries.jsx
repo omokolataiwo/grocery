@@ -3,12 +3,18 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import GroceryItems from '../container/GroceryItems';
 import AddGroceryItem from '../container/AddGroceryItem';
-import {
-  getAllItems, addItem, updateItem, resetGroceryState
-} from '../../actions/grocery';
-import { ADD_NEW_ITEM_FAILURE } from '../../const';
 
-class Shopping extends Component {
+import {
+  getAllItems,
+  addItem,
+  updateItem,
+  resetGroceryState,
+  deleteItem,
+  toggleBuy
+} from '../../actions/grocery';
+import { ADD_NEW_ITEM_FAILURE, ADD_NEW_ITEM } from '../../const';
+
+class Groceries extends Component {
   // static propTypes = {
   //   groceries: PropTypes.arrayOf(PropTypes.shape({
   //     id: PropTypes.string.isRequired,
@@ -16,15 +22,14 @@ class Shopping extends Component {
   //   })).isRequired
   // }
 
+  defaultGrocery = { name: '', amount: '', purchased: false };
+
+  defaultErrors = { name: [], amount: [] };
+
   state = {
-    grocery: {
-      name: '',
-      amount: 0
-    },
-    errors: {
-      name: [],
-      amount: []
-    }
+    grocery: { ...this.defaultGrocery },
+    errors: this.defaultErrors,
+    isEditing: false
   };
 
   componentDidMount() {
@@ -36,8 +41,11 @@ class Shopping extends Component {
     const { type, error, resetGroceryState } = this.props;
 
     if (type === ADD_NEW_ITEM_FAILURE) {
-      this.setState({ errors: error });
-      resetGroceryState();
+      this.setState({ errors: error }, resetGroceryState);
+    }
+
+    if (type === ADD_NEW_ITEM) {
+      this.setState(() => ({ grocery: this.defaultGrocery }), resetGroceryState);
     }
   }
 
@@ -46,30 +54,62 @@ class Shopping extends Component {
     this.setState(prevState => ({
       grocery: { ...prevState.grocery, [name]: value }
     }));
-  }
+  };
+
+  onDeleteItem = (itemId) => {
+    const { deleteItem } = this.props;
+    deleteItem(itemId);
+  };
 
   onAddGrocery = (event) => {
     event.preventDefault();
     const { addItem, updateItem } = this.props;
-    const { grocery, updating } = this.state;
+    const { grocery, isEditing } = this.state;
 
-    return !updating ? addItem(grocery) : updateItem(grocery);
-  }
+    return !isEditing ? addItem(grocery) : updateItem(grocery);
+  };
+
+  onStartEditing = (grocery) => {
+    this.setState({ grocery, isEditing: true, errors: this.defaultErrors });
+  };
+
+  onStopEditing = () => {
+    this.setState({ grocery: this.defaultGrocery, isEditing: false });
+  };
+
+  toggleBuy = (itemId) => {
+    const { toggleBuy } = this.props;
+    toggleBuy(itemId);
+  };
 
   render() {
-    const { grocery, errors } = this.state;
+    const { grocery, errors, isEditing } = this.state;
     const { items } = this.props;
 
     return (
-      <div>
+      <div className="main container">
         <h1>Grocery Listify</h1>
-        <GroceryItems groceries={items || []} />
-        <AddGroceryItem
-          grocery={grocery}
-          errors={errors}
-          onChange={this.onFormFieldChange}
-          addItem={this.onAddGrocery}
-        />
+        <div className="row">
+          <div className="items col-md-9">
+            <TransactionSummary items={items} />
+            <GroceryItems
+              groceries={items || []}
+              deleteItem={this.onDeleteItem}
+              startEditing={this.onStartEditing}
+              toggleBuy={this.toggleBuy}
+            />
+          </div>
+          <div className="item-form col-md-3">
+            <AddGroceryItem
+              grocery={grocery}
+              errors={errors}
+              onChange={this.onFormFieldChange}
+              stopEditing={this.onStopEditing}
+              saveItem={this.onAddGrocery}
+              isEditing={isEditing}
+            />
+          </div>
+        </div>
       </div>
     );
   }
@@ -79,6 +119,11 @@ const mapStateToProps = ({ grocery: { type, items, error } }) => ({ type, items,
 export default connect(
   mapStateToProps,
   {
-    getAllItems, addItem, updateItem, resetGroceryState
+    getAllItems,
+    addItem,
+    updateItem,
+    resetGroceryState,
+    deleteItem,
+    toggleBuy
   }
-)(Shopping);
+)(Groceries);

@@ -14,5 +14,11 @@ export const itemValidation = {
       strict: true,
       greaterThan: 0
     }
+  },
+  purchased: {
+    presence: {
+      allowEmpty: false,
+      message: 'is required.'
+    }
   }
 };

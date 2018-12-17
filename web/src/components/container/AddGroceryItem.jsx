@@ -3,9 +3,20 @@ import PropTypes from 'prop-types';
 import TextInputField from './TextInputField';
 
 const AddGroceryItem = ({
-  grocery, errors, onChange, addItem
+  grocery, errors, stopEditing, onChange, saveItem, isEditing
 }) => (
-  <div>
+  <div className="form-title">
+    {!isEditing ? (
+      <h3>Add New Item</h3>
+    ) : (
+      <h3>
+        <span onClick={stopEditing} className="back-btn">
+          {'<'}
+        </span>
+
+        <span className="label">Edit Item</span>
+      </h3>
+    )}
     <TextInputField
       size={12}
       errors={errors.name}
@@ -26,8 +37,8 @@ const AddGroceryItem = ({
       onChange={onChange}
     />
 
-    <button type="button" className="btn btn-primary" onClick={addItem}>
-      Add Item
+    <button type="button" className="btn btn-primary col-md-12" onClick={saveItem}>
+      {!isEditing ? 'Add New Item' : 'Edit Item'}
     </button>
   </div>
 );
@@ -35,13 +46,13 @@ const AddGroceryItem = ({
 AddGroceryItem.propTypes = {
   grocery: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired
+    amount: PropTypes.string.isRequired
   }).isRequired,
   errors: PropTypes.shape({
     name: PropTypes.arrayOf(PropTypes.string),
     amount: PropTypes.arrayOf(PropTypes.string)
   }).isRequired,
-  addItem: PropTypes.func.isRequired,
+  saveItem: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired
 };
 
