@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import GroceryItems from '../container/GroceryItems';
 import AddGroceryItem from '../container/AddGroceryItem';
-
+import TransactionSummary from '../container/TransactionSummary';
 import {
   getAllItems,
   addItem,
@@ -91,7 +91,7 @@ class Groceries extends Component {
         <h1>Grocery Listify</h1>
         <div className="row">
           <div className="items col-md-9">
-            <TransactionSummary items={items} />
+            <TransactionSummary items={items || []} />
             <GroceryItems
               groceries={items || []}
               deleteItem={this.onDeleteItem}
