@@ -3,9 +3,13 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import baseRoute from './router';
+import enVariable from './envConfig';
+
+const { dbConnection } = enVariable;
+
 
 mongoose.connect(
-  'mongodb://localhost/grocery-store',
+  dbConnection,
   { useNewUrlParser: true }
 );
 

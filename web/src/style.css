@@ -63,4 +63,22 @@
   display: inline-block;
   margin-left: 10px;
   vertical-align: bottom;
-} 
+}
+
+.jumbotron {
+  margin-bottom: 5%;
+}
+.jumbotron h1 {
+  font-family: 'Pacifico', cursive;
+  margin: 5% auto 2% auto;
+}
+.jumbotron svg {
+  color: #d22e2e;
+}
+
+.home svg {
+  font-size: 6em;
+}
+.home h5 {
+  margin: 5% auto;
+}
