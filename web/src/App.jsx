@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
-  Switch, Route, Redirect, Link
+  Switch, Route, Redirect
 } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faTrash, faEdit, faCartPlus, faShoppingCart
+  faTrash, faEdit, faCartPlus, faShoppingCart, faShoppingBag, faBriefcase, faChartLine, faHeart
 } from '@fortawesome/free-solid-svg-icons';
 import Groceries from './components/pages/Groceries';
-import Signin from './components/pages/Signin';
+import Home from './components/pages/Home';
+import NavigationBar from './components/container/NavigationBar';
 
-library.add(faTrash, faEdit, faCartPlus, faShoppingCart);
-
+library.add(faTrash, faEdit, faCartPlus, faShoppingCart, faBriefcase, faShoppingBag, faChartLine, faHeart);
 
 class App extends Component {
   state = {};
@@ -19,21 +19,18 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav>
-          <Link to="/groceries">Groceries</Link>
-          <Link to="/signin">Signout</Link>
-        </nav>
+        <NavigationBar />
         <Switch>
-          <Route path="/signin" component={Signin} />
+          <Route path="/home" component={Home} />
           <Route path="/groceries" component={Groceries} />
-          <Redirect to="/signin" />
+          <Redirect to="/home" />
         </Switch>
       </React.Fragment>
     );
   }
 }
 
-const mapStateToProps = ({}) => ({});
+const mapStateToProps = () => ({});
 export default connect(
   mapStateToProps,
   {}

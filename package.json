@@ -10,13 +10,15 @@
     "postinstall": "npm run build",
     "build": "webpack --config webpack.config.js -p",
     "build:dev": "babel server --out-dir dist --watch",
-    "start": "node serve.js",
+    "start": "node dist/index.js",
     "start:dev": "nodemon dist/index.js",
     "webpack:dev": "webpack-dev-server --config webpack.config.js --mode development",
     "all": "npm-run-all --parallel build:dev start:dev lint:watch webpack:dev",
     "lint": "node_modules/.bin/esw web/src",
     "lint:watch": "sane \"node_modules/.bin/esw web/src\" \"web/src\"",
-    "test": "jest --updateSnapshot && codecov -t 6ca7b775-fbde-47d2-8f36-f8b0db99f622"
+    "test:client": "jest --updateSnapshot",
+    "test:server": "nyc  --reporter=html --reporter=text mocha --exit -r @babel/register ./test/server/**/*.js",
+    "test:dev": "nodemon --exec \"yarn test:server\" ./test/server"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.10",
@@ -26,6 +28,7 @@
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.3",
     "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
@@ -45,12 +48,14 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "babel-core": "^7.0.0-bridge",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
     "css-loader": "^1.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
@@ -68,12 +73,14 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "npm-run-all": "^4.1.3",
+    "nyc": "^13.1.0",
     "prop-types": "^15.6.2",
     "react-dev-utils": "^6.0.5",
     "react-hot-loader": "^4.3.11",
     "redux-devtools-extension": "^2.13.5",
     "redux-mock-store": "^1.5.3",
     "style-loader": "^0.23.1",
+    "supertest": "^3.3.0",
     "webpack": "^4.22.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
@@ -81,6 +88,7 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
+      "server/**/*.js",
       "web/src/**/*.{js,jsx}",
       "!web/src/reducers/index.js",
       "!web/src/store/index.js",
@@ -97,15 +105,15 @@
     "bail": true,
     "verbose": false,
     "setupFiles": [
-      "<rootDir>/web/__tests__/setup/setupEnzyme.js"
+      "<rootDir>/__tests__/setup/enzyme.js"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/web/__tests__/setup/",
-      "<rootDir>/web/__tests__/__mocks__/"
+      "<rootDir>/__tests__/setup/",
+      "<rootDir>/__tests__/__mocks__/"
     ],
     "moduleNameMapper": {
       ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/web/__tests__/__mocks__/filesMock.js"
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__tests__/__mocks__/filesMock.js"
     }
   }
 }
