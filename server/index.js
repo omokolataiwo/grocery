@@ -21,6 +21,6 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/api/v1', baseRoute);
 
-app.listen('7000', () => console.log('Server started on port: 7000'));
+app.listen(process.env.PORT, () => console.log('Server started on port: ', process.env.PORT));
 
 export default app;
