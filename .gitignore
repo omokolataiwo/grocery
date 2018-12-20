@@ -2,3 +2,6 @@
 yarn.lock
 .env
 .nyc_output
+/coverage
+/dist
+.DS_Store
