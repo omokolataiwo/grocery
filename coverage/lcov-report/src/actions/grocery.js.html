@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/actions/grocery.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/actions</a> grocery.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/47</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>30/30</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>25/25</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import axios from 'axios';
+import {
+  FETCH_ALL_ITEMS,
+  BASE_URL,
+  ADD_NEW_ITEM,
+  ADD_NEW_ITEM_FAILURE,
+  RESET_GROCERY_STATE,
+  DELETE_ITEM,
+  UPDATE_ITEM,
+  UPDATE_ITEM_FAILURE,
+  BUYING_ITEM,
+  BUYING_ITEM_ERROR
+} from '../const';
+&nbsp;
+const fetchAllItems = items =&gt; ({ type: FETCH_ALL_ITEMS, items });
+const addNewItem = item =&gt; ({ type: ADD_NEW_ITEM, item });
+const addNewItemFailure = error =&gt; ({ type: ADD_NEW_ITEM_FAILURE, error });
+const removeItem = item =&gt; ({ type: DELETE_ITEM, id: item._id });
+const reset = () =&gt; ({ type: RESET_GROCERY_STATE });
+const onUpdateItem = item =&gt; ({ type: UPDATE_ITEM, item });
+const onUpdateItemError = error =&gt; ({ type: UPDATE_ITEM_FAILURE, error });
+const onToggleBuy = itemId =&gt; ({ type: BUYING_ITEM, itemId });
+const onToggleBuyError = error =&gt; ({ type: BUYING_ITEM_ERROR, error });
+&nbsp;
+export const getAllItems = () =&gt; dispatch =&gt; axios.get(`${BASE_URL}/grocery`).then(({ data: { items } }) =&gt; dispatch(fetchAllItems(items)));
+&nbsp;
+export const addItem = item =&gt; dispatch =&gt; axios
+  .post(`${BASE_URL}/grocery`, item)
+  .then(({ data }) =&gt; {
+    dispatch(addNewItem(item));
+  })
+  .catch(({ response: { data: { error } } }) =&gt; dispatch(addNewItemFailure(error)));
+&nbsp;
+export const updateItem = item =&gt; dispatch =&gt; axios
+  .put(`${BASE_URL}/grocery/${item._id}`, item)
+  .then(() =&gt; dispatch(onUpdateItem(item)))
+  .catch(({ response: { data: { error } } }) =&gt; dispatch(onUpdateItemError(error)));
+&nbsp;
+export const deleteItem = itemId =&gt; dispatch =&gt; axios.delete(`${BASE_URL}/grocery/${itemId}`).then(({ data: { data: { item } } }) =&gt; {
+  dispatch(removeItem(item));
+});
+&nbsp;
+export const toggleBuy = itemId =&gt; (dispatch, getState) =&gt; {
+  const { items } = getState().grocery;
+  const item = items.find(item =&gt; item._id === itemId);
+&nbsp;
+  return axios
+    .put(`${BASE_URL}/grocery/${itemId}`, { ...item, purchased: !item.purchased })
+    .then(() =&gt; dispatch(onToggleBuy(itemId)))
+    .catch(({ response: { data: { error } } }) =&gt; dispatch(onToggleBuyError(error)));
+};
+&nbsp;
+export const resetGroceryState = () =&gt; dispatch =&gt; dispatch(reset());
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Dec 20 2018 18:53:15 GMT+0100 (West Africa Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

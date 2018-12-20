@@ -13,13 +13,13 @@ const Grocery = ({
     </p>
 
     <div className="control">
-
       <FontAwesomeIcon
-        onClick={deleteItem}
-        onKeyUp={deleteItem}
+        onClick={() => deleteItem(grocery._id)}
+        onKeyUp={() => deleteItem(grocery._id)}
         role="button"
         tabIndex="-99999"
         icon="trash"
+        id={`delete-${grocery._id}`}
         style={{ color: '#ff8f9a' }}
       />
 
@@ -30,6 +30,7 @@ const Grocery = ({
         role="button"
         icon="edit"
         style={{ color: 'rgb(119, 172, 241)' }}
+        id={`edit-${grocery._id}`}
       />
 
       <FontAwesomeIcon
@@ -37,6 +38,7 @@ const Grocery = ({
         onKeyUp={() => toggleBuy(grocery._id)}
         tabIndex="-199999"
         role="button"
+        id={`buy-${grocery._id}`}
         style={{ color: '#28a745' }}
         icon={grocery.purchased ? 'cart-plus' : 'shopping-cart'}
       />

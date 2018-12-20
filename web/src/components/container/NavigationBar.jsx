@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default ({}) => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="d-flex flex-grow-1">
       <span className="w-100 d-lg-none d-block" />
       <div className="w-100 text-right">
@@ -17,7 +17,7 @@ export default ({}) => (
           <Link to="/" className="nav-link m-2 menu-item">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to="/" className="nav-link m-2 menu-item">Store</Link>
+          <Link to="/groceries" className="nav-link m-2 menu-item">Store</Link>
         </li>
       </ul>
     </div>

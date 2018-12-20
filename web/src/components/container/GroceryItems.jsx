@@ -12,7 +12,7 @@ const GroceryItems = ({
           key={grocery._id}
           grocery={grocery}
           startEditing={startEditing}
-          deleteItem={() => deleteItem(grocery._id)}
+          deleteItem={deleteItem}
           toggleBuy={toggleBuy}
         />
       ))}

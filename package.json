@@ -73,6 +73,7 @@
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "moxios": "^0.4.0",
     "npm-run-all": "^4.1.3",
     "nyc": "^13.1.0",
     "prop-types": "^15.6.2",
@@ -89,7 +90,6 @@
   "jest": {
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "server/**/*.js",
       "web/src/**/*.{js,jsx}",
       "!web/src/reducers/index.js",
       "!web/src/store/index.js",
@@ -97,7 +97,6 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 80,
         "functions": 80,
         "lines": 80,
         "statements": -20
@@ -106,15 +105,17 @@
     "bail": true,
     "verbose": false,
     "setupFiles": [
-      "<rootDir>/__tests__/setup/enzyme.js"
+      "<rootDir>/test/client/setup/enzyme.js"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/setup/",
-      "<rootDir>/__tests__/__mocks__/"
+      "<rootDir>/test/server/",
+      "<rootDir>/test/client/setup/",
+      "<rootDir>/test/client/__mocks__/",
+      "<rootDir>/node_modules"
     ],
     "moduleNameMapper": {
       ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__tests__/__mocks__/filesMock.js"
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/client/__mocks__/filesMock.js"
     }
   }
 }
