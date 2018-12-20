@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:7000/api/v1';
+export const BASE_URL = 'https://grocery-house.herokuapp.com';
 export const FETCH_ALL_ITEMS = 'FETCH_ALL_ITEMS';
 export const ADD_NEW_ITEM = 'ADD_NEW_ITEM';
 export const ADD_NEW_ITEM_FAILURE = 'ADD_NEW_ITEM_FAILURE';
