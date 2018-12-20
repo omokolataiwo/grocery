@@ -14,7 +14,7 @@
     "start": "node dist/index.js",
     "start:dev": "nodemon dist/index.js",
     "webpack:dev": "webpack-dev-server --config webpack.config.js --mode development",
-    "all": "npm-run-all --parallel build:dev start:dev lint:watch webpack:dev",
+    "all": "npm-run-all --parallel build:server start:dev lint:watch webpack:dev",
     "lint": "node_modules/.bin/esw web/src",
     "lint:watch": "sane \"node_modules/.bin/esw web/src\" \"web/src\"",
     "test:client": "jest --updateSnapshot",

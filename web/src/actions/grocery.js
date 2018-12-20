@@ -26,7 +26,7 @@ export const getAllItems = () => dispatch => axios.get(`${BASE_URL}/grocery`).th
 
 export const addItem = item => dispatch => axios
   .post(`${BASE_URL}/grocery`, item)
-  .then(({ data }) => {
+  .then(({ data: { data: { item } } }) => {
     dispatch(addNewItem(item));
   })
   .catch(({ response: { data: { error } } }) => dispatch(addNewItemFailure(error)));
