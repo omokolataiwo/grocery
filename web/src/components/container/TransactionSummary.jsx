@@ -11,10 +11,6 @@ const TransactionSummary = ({ items }) => {
     }
   });
 
-  if (!totalSold) {
-    return null;
-  }
-
   return (
     <p style={{ marginLeft: '65%' }}>
     Total Item

@@ -1,0 +1,1078 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddGroceryItem Component should render component 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <GroceryItems
+    deleteItem={[MockFunction]}
+    errors={Object {}}
+    groceries={
+      Array [
+        Object {
+          "_id": "msken",
+          "amount": "",
+          "name": "Bread",
+          "purchased": false,
+        },
+      ]
+    }
+    startEditing={[MockFunction]}
+    toggleBuy={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "deleteItem": [MockFunction],
+      "errors": Object {},
+      "groceries": Array [
+        Object {
+          "_id": "msken",
+          "amount": "",
+          "name": "Bread",
+          "purchased": false,
+        },
+      ],
+      "startEditing": [MockFunction],
+      "toggleBuy": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="grocery-item col-md-4"
+          >
+            <h2
+              class="title"
+            >
+              Bread
+            </h2>
+            <p
+              class="amount"
+            >
+              ₦
+              
+            </p>
+            <div
+              class="control"
+            />
+          </div>
+        </div>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="row"
+        >
+          <Grocery
+            deleteItem={[MockFunction]}
+            grocery={
+              Object {
+                "_id": "msken",
+                "amount": "",
+                "name": "Bread",
+                "purchased": false,
+              }
+            }
+            startEditing={[MockFunction]}
+            toggleBuy={[MockFunction]}
+          />
+        </div>,
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="row"
+          >
+            <div
+              class="grocery-item col-md-4"
+            >
+              <h2
+                class="title"
+              >
+                Bread
+              </h2>
+              <p
+                class="amount"
+              >
+                ₦
+                
+              </p>
+              <div
+                class="control"
+              />
+            </div>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Grocery
+                deleteItem={[MockFunction]}
+                grocery={
+                  Object {
+                    "_id": "msken",
+                    "amount": "",
+                    "name": "Bread",
+                    "purchased": false,
+                  }
+                }
+                startEditing={[MockFunction]}
+                toggleBuy={[MockFunction]}
+              />,
+            ],
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "msken",
+              "nodeType": "function",
+              "props": Object {
+                "deleteItem": [MockFunction],
+                "grocery": Object {
+                  "_id": "msken",
+                  "amount": "",
+                  "name": "Bread",
+                  "purchased": false,
+                },
+                "startEditing": [MockFunction],
+                "toggleBuy": [MockFunction],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": <div
+                  class="grocery-item col-md-4"
+                >
+                  <h2
+                    class="title"
+                  >
+                    Bread
+                  </h2>
+                  <p
+                    class="amount"
+                  >
+                    ₦
+                    
+                  </p>
+                  <div
+                    class="control"
+                  />
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <h2
+                      className="title"
+                    >
+                      Bread
+                    </h2>,
+                    <p
+                      className="amount"
+                    >
+                      ₦
+                      
+                    </p>,
+                    <div
+                      className="control"
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="trash"
+                        id="delete-msken"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        onClick={[Function]}
+                        onKeyUp={[Function]}
+                        pull={null}
+                        pulse={false}
+                        role="button"
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "color": "#ff8f9a",
+                          }
+                        }
+                        symbol={false}
+                        tabIndex="-99999"
+                        title=""
+                        transform={null}
+                      />
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="edit"
+                        id="edit-msken"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        onClick={[Function]}
+                        onKeyUp={[Function]}
+                        pull={null}
+                        pulse={false}
+                        role="button"
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "color": "rgb(119, 172, 241)",
+                          }
+                        }
+                        symbol={false}
+                        tabIndex="-199999"
+                        title=""
+                        transform={null}
+                      />
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon="shopping-cart"
+                        id="buy-msken"
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        onClick={[Function]}
+                        onKeyUp={[Function]}
+                        pull={null}
+                        pulse={false}
+                        role="button"
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "color": "#28a745",
+                          }
+                        }
+                        symbol={false}
+                        tabIndex="-199999"
+                        title=""
+                        transform={null}
+                      />
+                    </div>,
+                  ],
+                  "className": "grocery-item col-md-4",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <h2
+                      class="title"
+                    >
+                      Bread
+                    </h2>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Bread",
+                      "className": "title",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Bread",
+                    ],
+                    "type": "h2",
+                  },
+                  Object {
+                    "instance": <p
+                      class="amount"
+                    >
+                      ₦
+                      
+                    </p>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "₦",
+                        "",
+                      ],
+                      "className": "amount",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "₦",
+                      "",
+                    ],
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": <div
+                      class="control"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="trash"
+                          id="delete-msken"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          onClick={[Function]}
+                          onKeyUp={[Function]}
+                          pull={null}
+                          pulse={false}
+                          role="button"
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "color": "#ff8f9a",
+                            }
+                          }
+                          symbol={false}
+                          tabIndex="-99999"
+                          title=""
+                          transform={null}
+                        />,
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="edit"
+                          id="edit-msken"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          onClick={[Function]}
+                          onKeyUp={[Function]}
+                          pull={null}
+                          pulse={false}
+                          role="button"
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "color": "rgb(119, 172, 241)",
+                            }
+                          }
+                          symbol={false}
+                          tabIndex="-199999"
+                          title=""
+                          transform={null}
+                        />,
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="shopping-cart"
+                          id="buy-msken"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          onClick={[Function]}
+                          onKeyUp={[Function]}
+                          pull={null}
+                          pulse={false}
+                          role="button"
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "color": "#28a745",
+                            }
+                          }
+                          symbol={false}
+                          tabIndex="-199999"
+                          title=""
+                          transform={null}
+                        />,
+                      ],
+                      "className": "control",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "border": false,
+                          "className": "",
+                          "fixedWidth": false,
+                          "flip": null,
+                          "icon": "trash",
+                          "id": "delete-msken",
+                          "inverse": false,
+                          "listItem": false,
+                          "mask": null,
+                          "onClick": [Function],
+                          "onKeyUp": [Function],
+                          "pull": null,
+                          "pulse": false,
+                          "role": "button",
+                          "rotation": null,
+                          "size": null,
+                          "spin": false,
+                          "style": Object {
+                            "color": "#ff8f9a",
+                          },
+                          "symbol": false,
+                          "tabIndex": "-99999",
+                          "title": "",
+                          "transform": null,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "border": false,
+                          "className": "",
+                          "fixedWidth": false,
+                          "flip": null,
+                          "icon": "edit",
+                          "id": "edit-msken",
+                          "inverse": false,
+                          "listItem": false,
+                          "mask": null,
+                          "onClick": [Function],
+                          "onKeyUp": [Function],
+                          "pull": null,
+                          "pulse": false,
+                          "role": "button",
+                          "rotation": null,
+                          "size": null,
+                          "spin": false,
+                          "style": Object {
+                            "color": "rgb(119, 172, 241)",
+                          },
+                          "symbol": false,
+                          "tabIndex": "-199999",
+                          "title": "",
+                          "transform": null,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "border": false,
+                          "className": "",
+                          "fixedWidth": false,
+                          "flip": null,
+                          "icon": "shopping-cart",
+                          "id": "buy-msken",
+                          "inverse": false,
+                          "listItem": false,
+                          "mask": null,
+                          "onClick": [Function],
+                          "onKeyUp": [Function],
+                          "pull": null,
+                          "pulse": false,
+                          "role": "button",
+                          "rotation": null,
+                          "size": null,
+                          "spin": false,
+                          "style": Object {
+                            "color": "#28a745",
+                          },
+                          "symbol": false,
+                          "tabIndex": "-199999",
+                          "title": "",
+                          "transform": null,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "deleteItem": [MockFunction],
+        "errors": Object {},
+        "groceries": Array [
+          Object {
+            "_id": "msken",
+            "amount": "",
+            "name": "Bread",
+            "purchased": false,
+          },
+        ],
+        "startEditing": [MockFunction],
+        "toggleBuy": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="container"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="grocery-item col-md-4"
+            >
+              <h2
+                class="title"
+              >
+                Bread
+              </h2>
+              <p
+                class="amount"
+              >
+                ₦
+                
+              </p>
+              <div
+                class="control"
+              />
+            </div>
+          </div>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="row"
+          >
+            <Grocery
+              deleteItem={[MockFunction]}
+              grocery={
+                Object {
+                  "_id": "msken",
+                  "amount": "",
+                  "name": "Bread",
+                  "purchased": false,
+                }
+              }
+              startEditing={[MockFunction]}
+              toggleBuy={[MockFunction]}
+            />
+          </div>,
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="row"
+            >
+              <div
+                class="grocery-item col-md-4"
+              >
+                <h2
+                  class="title"
+                >
+                  Bread
+                </h2>
+                <p
+                  class="amount"
+                >
+                  ₦
+                  
+                </p>
+                <div
+                  class="control"
+                />
+              </div>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Grocery
+                  deleteItem={[MockFunction]}
+                  grocery={
+                    Object {
+                      "_id": "msken",
+                      "amount": "",
+                      "name": "Bread",
+                      "purchased": false,
+                    }
+                  }
+                  startEditing={[MockFunction]}
+                  toggleBuy={[MockFunction]}
+                />,
+              ],
+              "className": "row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "msken",
+                "nodeType": "function",
+                "props": Object {
+                  "deleteItem": [MockFunction],
+                  "grocery": Object {
+                    "_id": "msken",
+                    "amount": "",
+                    "name": "Bread",
+                    "purchased": false,
+                  },
+                  "startEditing": [MockFunction],
+                  "toggleBuy": [MockFunction],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": <div
+                    class="grocery-item col-md-4"
+                  >
+                    <h2
+                      class="title"
+                    >
+                      Bread
+                    </h2>
+                    <p
+                      class="amount"
+                    >
+                      ₦
+                      
+                    </p>
+                    <div
+                      class="control"
+                    />
+                  </div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h2
+                        className="title"
+                      >
+                        Bread
+                      </h2>,
+                      <p
+                        className="amount"
+                      >
+                        ₦
+                        
+                      </p>,
+                      <div
+                        className="control"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="trash"
+                          id="delete-msken"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          onClick={[Function]}
+                          onKeyUp={[Function]}
+                          pull={null}
+                          pulse={false}
+                          role="button"
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "color": "#ff8f9a",
+                            }
+                          }
+                          symbol={false}
+                          tabIndex="-99999"
+                          title=""
+                          transform={null}
+                        />
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="edit"
+                          id="edit-msken"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          onClick={[Function]}
+                          onKeyUp={[Function]}
+                          pull={null}
+                          pulse={false}
+                          role="button"
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "color": "rgb(119, 172, 241)",
+                            }
+                          }
+                          symbol={false}
+                          tabIndex="-199999"
+                          title=""
+                          transform={null}
+                        />
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon="shopping-cart"
+                          id="buy-msken"
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          onClick={[Function]}
+                          onKeyUp={[Function]}
+                          pull={null}
+                          pulse={false}
+                          role="button"
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "color": "#28a745",
+                            }
+                          }
+                          symbol={false}
+                          tabIndex="-199999"
+                          title=""
+                          transform={null}
+                        />
+                      </div>,
+                    ],
+                    "className": "grocery-item col-md-4",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <h2
+                        class="title"
+                      >
+                        Bread
+                      </h2>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Bread",
+                        "className": "title",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Bread",
+                      ],
+                      "type": "h2",
+                    },
+                    Object {
+                      "instance": <p
+                        class="amount"
+                      >
+                        ₦
+                        
+                      </p>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "₦",
+                          "",
+                        ],
+                        "className": "amount",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "₦",
+                        "",
+                      ],
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": <div
+                        class="control"
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="trash"
+                            id="delete-msken"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            onClick={[Function]}
+                            onKeyUp={[Function]}
+                            pull={null}
+                            pulse={false}
+                            role="button"
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "color": "#ff8f9a",
+                              }
+                            }
+                            symbol={false}
+                            tabIndex="-99999"
+                            title=""
+                            transform={null}
+                          />,
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="edit"
+                            id="edit-msken"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            onClick={[Function]}
+                            onKeyUp={[Function]}
+                            pull={null}
+                            pulse={false}
+                            role="button"
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "color": "rgb(119, 172, 241)",
+                              }
+                            }
+                            symbol={false}
+                            tabIndex="-199999"
+                            title=""
+                            transform={null}
+                          />,
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon="shopping-cart"
+                            id="buy-msken"
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            onClick={[Function]}
+                            onKeyUp={[Function]}
+                            pull={null}
+                            pulse={false}
+                            role="button"
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "color": "#28a745",
+                              }
+                            }
+                            symbol={false}
+                            tabIndex="-199999"
+                            title=""
+                            transform={null}
+                          />,
+                        ],
+                        "className": "control",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": "trash",
+                            "id": "delete-msken",
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "onClick": [Function],
+                            "onKeyUp": [Function],
+                            "pull": null,
+                            "pulse": false,
+                            "role": "button",
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "style": Object {
+                              "color": "#ff8f9a",
+                            },
+                            "symbol": false,
+                            "tabIndex": "-99999",
+                            "title": "",
+                            "transform": null,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": "edit",
+                            "id": "edit-msken",
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "onClick": [Function],
+                            "onKeyUp": [Function],
+                            "pull": null,
+                            "pulse": false,
+                            "role": "button",
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "style": Object {
+                              "color": "rgb(119, 172, 241)",
+                            },
+                            "symbol": false,
+                            "tabIndex": "-199999",
+                            "title": "",
+                            "transform": null,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": "shopping-cart",
+                            "id": "buy-msken",
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "onClick": [Function],
+                            "onKeyUp": [Function],
+                            "pull": null,
+                            "pulse": false,
+                            "role": "button",
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "style": Object {
+                              "color": "#28a745",
+                            },
+                            "symbol": false,
+                            "tabIndex": "-199999",
+                            "title": "",
+                            "transform": null,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

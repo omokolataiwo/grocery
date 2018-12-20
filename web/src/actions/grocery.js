@@ -26,7 +26,7 @@ export const getAllItems = () => dispatch => axios.get(`${BASE_URL}/grocery`).th
 
 export const addItem = item => dispatch => axios
   .post(`${BASE_URL}/grocery`, item)
-  .then(({ data: { data: { item } } }) => {
+  .then(({ data }) => {
     dispatch(addNewItem(item));
   })
   .catch(({ response: { data: { error } } }) => dispatch(addNewItemFailure(error)));
@@ -45,7 +45,7 @@ export const toggleBuy = itemId => (dispatch, getState) => {
   const item = items.find(item => item._id === itemId);
 
   return axios
-    .put(`${BASE_URL}/grocery/${itemId}`, { purchased: !item.purchased })
+    .put(`${BASE_URL}/grocery/${itemId}`, { ...item, purchased: !item.purchased })
     .then(() => dispatch(onToggleBuy(itemId)))
     .catch(({ response: { data: { error } } }) => dispatch(onToggleBuyError(error)));
 };

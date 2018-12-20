@@ -1,0 +1,1064 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddGroceryItem Component should render component 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <AddGroceryItem
+    errors={Object {}}
+    grocery={
+      Object {
+        "amount": "",
+        "name": "",
+        "purchased": false,
+      }
+    }
+    onChange={[MockFunction]}
+    saveItem={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "errors": Object {},
+      "grocery": Object {
+        "amount": "",
+        "name": "",
+        "purchased": false,
+      },
+      "onChange": [MockFunction],
+      "saveItem": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="form-title"
+      >
+        <h3>
+          Add New Item
+        </h3>
+        <div>
+          <div
+            class="form-group col-md-12"
+          >
+            <label
+              for="name"
+            >
+              Item Name
+            </label>
+            <input
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Eg: Bread"
+              type="text"
+              value=""
+            />
+            <div
+              class="error"
+            />
+          </div>
+        </div>
+        <div>
+          <div
+            class="form-group col-md-12"
+          >
+            <label
+              for="amount"
+            >
+              Amount
+            </label>
+            <input
+              class="form-control"
+              id="amount"
+              name="amount"
+              placeholder="Amount"
+              type="text"
+              value=""
+            />
+            <div
+              class="error"
+            />
+          </div>
+        </div>
+        <button
+          class="btn btn-primary col-md-12"
+          type="button"
+        >
+          Add New Item
+        </button>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Add New Item
+          </h3>,
+          <TextInputField
+            errors={Array []}
+            label="Item Name"
+            name="name"
+            onChange={[MockFunction]}
+            placeholder="Eg: Bread"
+            size={12}
+            value=""
+          />,
+          <TextInputField
+            errors={Array []}
+            label="Amount"
+            name="amount"
+            onChange={[MockFunction]}
+            placeholder="Amount"
+            size={12}
+            value=""
+          />,
+          <button
+            className="btn btn-primary col-md-12"
+            onClick={[MockFunction]}
+            type="button"
+          >
+            Add New Item
+          </button>,
+        ],
+        "className": "form-title",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <h3>
+            Add New Item
+          </h3>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add New Item",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Add New Item",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "errors": Array [],
+            "label": "Item Name",
+            "name": "name",
+            "onChange": [MockFunction],
+            "placeholder": "Eg: Bread",
+            "size": 12,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div>
+              <div
+                class="form-group col-md-12"
+              >
+                <label
+                  for="name"
+                >
+                  Item Name
+                </label>
+                <input
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Eg: Bread"
+                  type="text"
+                  value=""
+                />
+                <div
+                  class="error"
+                />
+              </div>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="form-group col-md-12"
+              >
+                <label
+                  htmlFor="name"
+                >
+                  Item Name
+                </label>
+                <input
+                  className="form-control"
+                  id="name"
+                  name="name"
+                  onChange={[MockFunction]}
+                  placeholder="Eg: Bread"
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="error"
+                />
+              </div>,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <div
+                  class="form-group col-md-12"
+                >
+                  <label
+                    for="name"
+                  >
+                    Item Name
+                  </label>
+                  <input
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Eg: Bread"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="error"
+                  />
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      htmlFor="name"
+                    >
+                      Item Name
+                    </label>,
+                    <input
+                      className="form-control"
+                      id="name"
+                      name="name"
+                      onChange={[MockFunction]}
+                      placeholder="Eg: Bread"
+                      type="text"
+                      value=""
+                    />,
+                    <div
+                      className="error"
+                    />,
+                  ],
+                  "className": "form-group col-md-12",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <label
+                      for="name"
+                    >
+                      Item Name
+                    </label>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Item Name",
+                      "htmlFor": "name",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Item Name",
+                    ],
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": <input
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Eg: Bread"
+                      type="text"
+                      value=""
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "form-control",
+                      "id": "name",
+                      "name": "name",
+                      "onChange": [MockFunction],
+                      "placeholder": "Eg: Bread",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": <div
+                      class="error"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [],
+                      "className": "error",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Array [],
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "errors": Array [],
+            "label": "Amount",
+            "name": "amount",
+            "onChange": [MockFunction],
+            "placeholder": "Amount",
+            "size": 12,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": <div>
+              <div
+                class="form-group col-md-12"
+              >
+                <label
+                  for="amount"
+                >
+                  Amount
+                </label>
+                <input
+                  class="form-control"
+                  id="amount"
+                  name="amount"
+                  placeholder="Amount"
+                  type="text"
+                  value=""
+                />
+                <div
+                  class="error"
+                />
+              </div>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="form-group col-md-12"
+              >
+                <label
+                  htmlFor="amount"
+                >
+                  Amount
+                </label>
+                <input
+                  className="form-control"
+                  id="amount"
+                  name="amount"
+                  onChange={[MockFunction]}
+                  placeholder="Amount"
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="error"
+                />
+              </div>,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <div
+                  class="form-group col-md-12"
+                >
+                  <label
+                    for="amount"
+                  >
+                    Amount
+                  </label>
+                  <input
+                    class="form-control"
+                    id="amount"
+                    name="amount"
+                    placeholder="Amount"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="error"
+                  />
+                </div>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <label
+                      htmlFor="amount"
+                    >
+                      Amount
+                    </label>,
+                    <input
+                      className="form-control"
+                      id="amount"
+                      name="amount"
+                      onChange={[MockFunction]}
+                      placeholder="Amount"
+                      type="text"
+                      value=""
+                    />,
+                    <div
+                      className="error"
+                    />,
+                  ],
+                  "className": "form-group col-md-12",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <label
+                      for="amount"
+                    >
+                      Amount
+                    </label>,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Amount",
+                      "htmlFor": "amount",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Amount",
+                    ],
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": <input
+                      class="form-control"
+                      id="amount"
+                      name="amount"
+                      placeholder="Amount"
+                      type="text"
+                      value=""
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "form-control",
+                      "id": "amount",
+                      "name": "amount",
+                      "onChange": [MockFunction],
+                      "placeholder": "Amount",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": <div
+                      class="error"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [],
+                      "className": "error",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Array [],
+                    ],
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": <button
+            class="btn btn-primary col-md-12"
+            type="button"
+          >
+            Add New Item
+          </button>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Add New Item",
+            "className": "btn btn-primary col-md-12",
+            "onClick": [MockFunction],
+            "type": "button",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Add New Item",
+          ],
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "errors": Object {},
+        "grocery": Object {
+          "amount": "",
+          "name": "",
+          "purchased": false,
+        },
+        "onChange": [MockFunction],
+        "saveItem": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="form-title"
+        >
+          <h3>
+            Add New Item
+          </h3>
+          <div>
+            <div
+              class="form-group col-md-12"
+            >
+              <label
+                for="name"
+              >
+                Item Name
+              </label>
+              <input
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Eg: Bread"
+                type="text"
+                value=""
+              />
+              <div
+                class="error"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              class="form-group col-md-12"
+            >
+              <label
+                for="amount"
+              >
+                Amount
+              </label>
+              <input
+                class="form-control"
+                id="amount"
+                name="amount"
+                placeholder="Amount"
+                type="text"
+                value=""
+              />
+              <div
+                class="error"
+              />
+            </div>
+          </div>
+          <button
+            class="btn btn-primary col-md-12"
+            type="button"
+          >
+            Add New Item
+          </button>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Add New Item
+            </h3>,
+            <TextInputField
+              errors={Array []}
+              label="Item Name"
+              name="name"
+              onChange={[MockFunction]}
+              placeholder="Eg: Bread"
+              size={12}
+              value=""
+            />,
+            <TextInputField
+              errors={Array []}
+              label="Amount"
+              name="amount"
+              onChange={[MockFunction]}
+              placeholder="Amount"
+              size={12}
+              value=""
+            />,
+            <button
+              className="btn btn-primary col-md-12"
+              onClick={[MockFunction]}
+              type="button"
+            >
+              Add New Item
+            </button>,
+          ],
+          "className": "form-title",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <h3>
+              Add New Item
+            </h3>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add New Item",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Add New Item",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "errors": Array [],
+              "label": "Item Name",
+              "name": "name",
+              "onChange": [MockFunction],
+              "placeholder": "Eg: Bread",
+              "size": 12,
+              "value": "",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div>
+                <div
+                  class="form-group col-md-12"
+                >
+                  <label
+                    for="name"
+                  >
+                    Item Name
+                  </label>
+                  <input
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Eg: Bread"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="error"
+                  />
+                </div>
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="form-group col-md-12"
+                >
+                  <label
+                    htmlFor="name"
+                  >
+                    Item Name
+                  </label>
+                  <input
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    onChange={[MockFunction]}
+                    placeholder="Eg: Bread"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="error"
+                  />
+                </div>,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <div
+                    class="form-group col-md-12"
+                  >
+                    <label
+                      for="name"
+                    >
+                      Item Name
+                    </label>
+                    <input
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Eg: Bread"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="error"
+                    />
+                  </div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        htmlFor="name"
+                      >
+                        Item Name
+                      </label>,
+                      <input
+                        className="form-control"
+                        id="name"
+                        name="name"
+                        onChange={[MockFunction]}
+                        placeholder="Eg: Bread"
+                        type="text"
+                        value=""
+                      />,
+                      <div
+                        className="error"
+                      />,
+                    ],
+                    "className": "form-group col-md-12",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <label
+                        for="name"
+                      >
+                        Item Name
+                      </label>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Item Name",
+                        "htmlFor": "name",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Item Name",
+                      ],
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": <input
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        placeholder="Eg: Bread"
+                        type="text"
+                        value=""
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "form-control",
+                        "id": "name",
+                        "name": "name",
+                        "onChange": [MockFunction],
+                        "placeholder": "Eg: Bread",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        undefined,
+                      ],
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": <div
+                        class="error"
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [],
+                        "className": "error",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Array [],
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "errors": Array [],
+              "label": "Amount",
+              "name": "amount",
+              "onChange": [MockFunction],
+              "placeholder": "Amount",
+              "size": 12,
+              "value": "",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": <div>
+                <div
+                  class="form-group col-md-12"
+                >
+                  <label
+                    for="amount"
+                  >
+                    Amount
+                  </label>
+                  <input
+                    class="form-control"
+                    id="amount"
+                    name="amount"
+                    placeholder="Amount"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="error"
+                  />
+                </div>
+              </div>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="form-group col-md-12"
+                >
+                  <label
+                    htmlFor="amount"
+                  >
+                    Amount
+                  </label>
+                  <input
+                    className="form-control"
+                    id="amount"
+                    name="amount"
+                    onChange={[MockFunction]}
+                    placeholder="Amount"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    className="error"
+                  />
+                </div>,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <div
+                    class="form-group col-md-12"
+                  >
+                    <label
+                      for="amount"
+                    >
+                      Amount
+                    </label>
+                    <input
+                      class="form-control"
+                      id="amount"
+                      name="amount"
+                      placeholder="Amount"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="error"
+                    />
+                  </div>,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <label
+                        htmlFor="amount"
+                      >
+                        Amount
+                      </label>,
+                      <input
+                        className="form-control"
+                        id="amount"
+                        name="amount"
+                        onChange={[MockFunction]}
+                        placeholder="Amount"
+                        type="text"
+                        value=""
+                      />,
+                      <div
+                        className="error"
+                      />,
+                    ],
+                    "className": "form-group col-md-12",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": <label
+                        for="amount"
+                      >
+                        Amount
+                      </label>,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Amount",
+                        "htmlFor": "amount",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "Amount",
+                      ],
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": <input
+                        class="form-control"
+                        id="amount"
+                        name="amount"
+                        placeholder="Amount"
+                        type="text"
+                        value=""
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "form-control",
+                        "id": "amount",
+                        "name": "amount",
+                        "onChange": [MockFunction],
+                        "placeholder": "Amount",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        undefined,
+                      ],
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": <div
+                        class="error"
+                      />,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [],
+                        "className": "error",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Array [],
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": <button
+              class="btn btn-primary col-md-12"
+              type="button"
+            >
+              Add New Item
+            </button>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Add New Item",
+              "className": "btn btn-primary col-md-12",
+              "onClick": [MockFunction],
+              "type": "button",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Add New Item",
+            ],
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

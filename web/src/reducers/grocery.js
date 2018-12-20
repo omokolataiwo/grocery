@@ -20,8 +20,12 @@ const updateItem = (items, newItem) => {
 
 const toggleBuying = (items, itemId) => {
   const newItems = [...items];
-  const itemIndex = findIndex(items, itemId);
-  newItems[itemIndex].purchased = !newItems[itemIndex].purchased;
+
+  const itemIndex = findIndex(newItems, itemId);
+  const item = { ...newItems[itemIndex] };
+
+  item.purchased = !item.purchased;
+  newItems.splice(itemIndex, 1, item);
   return newItems;
 };
 

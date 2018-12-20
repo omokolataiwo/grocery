@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import GroceryItems from '../container/GroceryItems';
 import AddGroceryItem from '../container/AddGroceryItem';
 import TransactionSummary from '../container/TransactionSummary';
@@ -14,14 +13,7 @@ import {
 } from '../../actions/grocery';
 import { ADD_NEW_ITEM_FAILURE, ADD_NEW_ITEM } from '../../const';
 
-class Groceries extends Component {
-  // static propTypes = {
-  //   groceries: PropTypes.arrayOf(PropTypes.shape({
-  //     id: PropTypes.string.isRequired,
-  //     title: PropTypes.string.isRequired,
-  //   })).isRequired
-  // }
-
+export class Groceries extends Component {
   defaultGrocery = { name: '', amount: '', purchased: false };
 
   defaultErrors = { name: [], amount: [] };
