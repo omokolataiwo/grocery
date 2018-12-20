@@ -13,7 +13,7 @@ import NavigationBar from './components/container/NavigationBar';
 
 library.add(faTrash, faEdit, faCartPlus, faShoppingCart, faBriefcase, faShoppingBag, faChartLine, faHeart);
 
-class App extends Component {
+export class App extends Component {
   state = {};
 
   render() {
