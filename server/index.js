@@ -7,6 +7,7 @@ import enVariable from './envConfig';
 
 const { dbConnection } = enVariable;
 
+console.log(dbConnection);
 
 mongoose.connect(
   dbConnection,
