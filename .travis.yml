@@ -1,3 +1,7 @@
 language: node_js
 node_js:
   - "10.14.1"
+before_script:
+  - npm install -g nyc
+after_script: 
+  - nyc report --reporter=text-lcov
