@@ -19,7 +19,7 @@
     "lint:watch": "sane \"node_modules/.bin/esw web/src\" \"web/src\"",
     "test": "npm run test:client && npm run test:server",
     "test:client": "jest --updateSnapshot",
-    "test:server": "nyc  --reporter=html --reporter=text mocha --exit -r @babel/register ./test/server/**/*.js",
+    "test:server": "mocha --exit -r @babel/register ./test/server/**/*.js",
     "test:dev": "nodemon --exec \"yarn test:server\" ./test/server"
   },
   "dependencies": {
