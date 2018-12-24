@@ -19,7 +19,7 @@
     "lint:watch": "sane \"node_modules/.bin/esw web/src\" \"web/src\"",
     "test": "npm run test:client && npm run test:server",
     "test:client": "jest --updateSnapshot",
-    "test:server": "mocha --exit -r @babel/register ./test/server/**/*.js",
+    "test:server": "nyc --reporter=html --reporter=text mocha --exit -r @babel/register ./test/server/**/*.js",
     "test:dev": "nodemon --exec \"yarn test:server\" ./test/server"
   },
   "dependencies": {
@@ -75,6 +75,7 @@
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "mocha": "^5.2.0",
     "moxios": "^0.4.0",
     "npm-run-all": "^4.1.3",
     "nyc": "^13.1.0",
